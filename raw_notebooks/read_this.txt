@@ -1,0 +1,3 @@
+Put all the folders here and erase this file(!). They should be in a folder structure that makes sense
+
+e.g.: hw/hw01/
