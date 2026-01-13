@@ -1,4 +1,4 @@
-name: data271
+name: [your_name_here]
 channels:
   - conda-forge
   - defaults
