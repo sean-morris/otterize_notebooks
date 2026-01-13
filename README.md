@@ -8,7 +8,7 @@ This contains scripts to otterize sets of notebooks
 This repository uses conda/mamba for environment management. To set up your environment:
 
 1. Create a copy of the environment configuration file (if one exists) or create your own `environment.yaml`
-2. Configure the `name` field in `environment.yaml` with an appropriate name for your use case
+2. Configure the `name` field in `environment.yaml` with an appropriate name for your use case (e.g., `otter-notebooks`, `my-project-notebooks`, etc.)
 3. Install the environment using:
    ```bash
    conda env create -f environment.yaml
