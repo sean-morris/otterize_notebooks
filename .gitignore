@@ -1,0 +1,7 @@
+# Grading results folder (contains student grades)
+grading_results/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+.DS_Store
+**/final_grades.csv
