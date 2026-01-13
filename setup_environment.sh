@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Setup script for DATA 271 environment
+# Setup script for [YOUr_NAME] environment
 # Creates conda environment, installs packages, and sets up Jupyter kernel
 
 set -e  # Exit on error
 
 echo "=================================================="
-echo "Setting up DATA 271 environment"
+echo "Setting up environment"
 echo "=================================================="
 echo ""
 
@@ -32,12 +32,12 @@ echo "✓ Environment created/updated"
 echo ""
 
 # Activate environment (note: this only works within the script)
-echo "🔧 Installing Jupyter kernel for 'data271'..."
+echo "🔧 Installing Jupyter kernel for ..."
 eval "$(conda shell.bash hook)"
 conda activate data271
 
 # Install kernel so nbclient can use it
-python -m ipykernel install --user --name data271 --display-name "Python (data271)"
+python -m ipykernel install --user --name [YOUR_NAME] --display-name "Python ([YOUR_NAME])"
 echo "✓ Kernel installed"
 echo ""
 
@@ -54,7 +54,7 @@ fi
 
 # Check otter-grader
 if conda run -n data271 python -c "import otter" 2>/dev/null; then
-    OTTER_VERSION=$(conda run -n data271 python -c "import otter; print(otter.__version__)")
+    OTTER_VERSION=$(conda run -n [YOUR_NAME] python -c "import otter; print(otter.__version__)")
     echo "✓ otter-grader ${OTTER_VERSION} installed"
 else
     echo "❌ ERROR: otter-grader not found"
@@ -62,7 +62,7 @@ else
 fi
 
 # Check nbclient
-if conda run -n data271 python -c "import nbclient" 2>/dev/null; then
+if conda run -n [YOUR_NAME] python -c "import nbclient" 2>/dev/null; then
     echo "✓ nbclient installed"
 else
     echo "❌ ERROR: nbclient not found"
@@ -70,7 +70,7 @@ else
 fi
 
 # Check datascience
-if conda run -n data271 python -c "import datascience" 2>/dev/null; then
+if conda run -n [YOUR_NAME] python -c "import datascience" 2>/dev/null; then
     echo "✓ datascience package installed"
 else
     echo "❌ ERROR: datascience package not found"
@@ -82,15 +82,12 @@ echo "=================================================="
 echo "✅ Setup complete!"
 echo "=================================================="
 echo ""
-echo "The 'data271' environment is now set up with all dependencies."
+echo "The [YOUR_NAME] environment is now set up with all dependencies."
 echo ""
 echo "To activate it, run:"
-echo "  conda activate data271"
+echo "  conda activate [YOUR_NAME]"
 echo ""
 echo "Or source this command (to activate in current shell):"
 echo "  eval \"\$(conda shell.bash hook)\" && conda activate data271"
 echo ""
-echo "Then run:"
-echo "  python3 otter_assign_runner.py    # Generate assignments"
-echo "  python3 otter_grade_runner.py     # Grade solutions"
 echo ""
