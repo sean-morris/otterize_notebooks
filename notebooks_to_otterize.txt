@@ -1,0 +1,6 @@
+# Notebooks to process with otter assign
+# One path per line, relative to the raw_notebooks parent directory
+# Lines starting with # are ignored
+
+# e.g. raw_notebooks/hw/hw01/hw01.ipynb
+
